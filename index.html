@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit card checkout</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/inputmask.min.js"></script>
+    <script defer src="js/just-validate.production.min.js"></script>
+    <script defer src="js/script.js"></script>
+</head>
+
+<body>
+    <section class="checkout">
+        <div class="container">
+            <h1 class="checkout__title">Secure Checkout</h1>
+            <div class="checkout__card">
+                <div class="checkout__card-box">
+                    <div class="checkout__card-logo">
+                        <img src="/img/visa.svg" alt="Логотип карт Visa">
+                        <img src="/img/mastercard.svg" alt="Логотип карт Mastercard">
+                    </div>
+                    <div class="checkout__card-info">
+                        <input type="text" class="checkout__number">
+                        <div class="checkout__name-wrapper">
+                            <input type="text" class="checkout__name">
+                            <input type="text" class="checkout__expiry">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="checkout__add-scan_box">
+                <button class="checkout__add-card">
+                    <p class="checkout__btn-add">Add new card</p>
+                </button>
+                <button class="checkout__scan-card">
+                    <p class="checkout__btn-scan">Scan & Add</p>
+                </button>
+            </div>
+            <form action="" class="checkout__form">
+                <fieldset>
+                    <legend class="visually-hidden">Форма для ввода данных карты</legend>
+                    <div class="checkout__wrapper-form">
+                        <label class="checkout__label checkout__label_holder">
+                            <p>Card Holder</p>
+                            <input type="text" class="checkout__input checkout__input_name"
+                                placeholder="Enter your name" name="name" id="name">
+                        </label>
+                        <label class="checkout__label checkout__label_number">
+                            <p>Card Number</p>
+                            <input type="text" class="checkout__input checkout__input_number"
+                                placeholder="Enter your card number" name="card" id="card">
+                        </label>
+                        <label class="checkout__label checkout__label_expiry">
+                            <p>Card Expiry</p>
+                            <input type="text" class="checkout__input checkout__input_expiry" 
+                            placeholder="mm/yy" name="expiry" id="expiry">
+                        </label>
+                        <label class="checkout__label checkout__label_cvv">
+                            <p>CVV</p>
+                            <input type="text" class="checkout__input checkout__input_cvv" placeholder="Enter CVV"
+                                name="cvv" id="cvv">
+                        </label>
+                    </div>
+                    <button class="checkout__submit">Check out</button>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

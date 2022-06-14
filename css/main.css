@@ -1,0 +1,306 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    min-width: 1600px;
+    min-height: 1200px;
+    margin: 0;
+    background: linear-gradient(242.01deg, rgba(82, 0, 106, 0.7) 39.15%, rgba(205, 17, 59, 0.7) 76.16%);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+input {
+    color: #52006A;
+}
+
+/* Remove Arrows/Spinners */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+::placeholder {
+    font-size: 12px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+fieldset {
+    border: none;
+}
+
+label,
+button {
+    user-select: none;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+/* при работе с float */
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.just-validate-error-label {
+    position: absolute;
+    left: 0px;
+    top: 80px;
+    font-size: 11px;
+}
+
+.checkout {
+    width: 415px;
+    height: 820px;
+    background: rgba(241, 241, 241, 0.83);
+    margin: 195px auto;
+}
+
+.checkout__title {
+    padding-top: 27px;
+    padding-right: 25px;
+    text-align: right;
+    color: #52006A;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 36px;
+}
+
+.checkout__title:before {
+    display: inline-block;
+    content: '';
+    background-image: url(/img/logo.svg);
+    margin-right: 7px;
+    width: 16px;
+    height: 17px;
+    position: relative;
+    top: 3px;
+}
+
+.checkout__card-box {
+    width: 365px;
+    height: 190px;
+    margin: 0 auto;
+    background: linear-gradient(258.77deg, rgba(200, 147, 216, 0.53) 26.64%, #EFA3B6 70.3%);
+    border-radius: 32px;
+    margin-bottom: 9px;
+}
+
+.checkout__card-logo {
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 182px;
+    padding: 7px 24px;
+    margin-bottom: 41px;
+}
+
+.checkout__card-info {
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.checkout__number {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 43px;
+    border: none;
+    background: transparent;
+}
+
+.checkout__name-wrapper {
+    display: inline-flex;
+    padding-bottom: 30px;
+}
+
+.checkout__name,
+.checkout__expiry {
+    border: none;
+    background: transparent;
+}
+
+.checkout__add-scan_box {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 30px;
+}
+
+.checkout__add-card,
+.checkout__scan-card {
+    padding-top: 32px;
+    background-image: url(/img/logo-card.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: top;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #52006A;
+    border: none;
+}
+
+.checkout__scan-card {
+    background-image: url(/img/logo-scan-add.svg);
+}
+
+.checkout__label {
+    position: relative;
+    display: block;
+}
+
+.checkout__wrapper-form {
+    display: grid;
+    grid-template-columns: 108px;
+    grid-template-areas:
+        "card-holder ."
+        "card-number ."
+        "card-expiry cvv";
+    row-gap: 30px;
+    column-gap: 139px;
+    margin-bottom: 60px;
+    justify-content: center;
+}
+
+.checkout__label_holder {
+    grid-area: card-holder;
+    width: 355px;
+}
+
+.checkout__label_number {
+    grid-area: card-number;
+    width: 355px;
+}
+
+.checkout__label_expiry {
+    grid-area: card-expiry;
+    width: 108px;
+}
+
+.checkout__label_cvv {
+    grid-area: cvv;
+    width: 108px;
+}
+
+.checkout__input {
+    width: 108px;
+}
+
+.checkout__input_name,
+.checkout__input_number {
+    width: 355px;
+}
+
+.checkout__submit {
+    position: relative;
+    left: 48px;
+    width: 290px;
+    height: 60px;
+    margin: 0 auto;
+    background: #FFA900;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    line-height: 22px;
+    color: #52006A;
+    text-transform: uppercase;
+}
+
+.checkout__label {
+    color: #CD113B;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.checkout__label_expiry,
+.checkout__label_cvv {
+    text-align: center;
+}
+
+.checkout__input {
+    height: 60px;
+    background: #F2ECEC;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+
+.checkout__input_name,
+.checkout__input_number {
+    padding: 19px 57px;
+    font-size: 19px;
+    line-height: 23px;
+    letter-spacing: 0.15em;
+}
+
+.checkout__input_expiry,
+.checkout__input_cvv {
+    padding: 20px 24px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+}
